@@ -77,6 +77,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // *must* be "0" for every public commit!
 #define TEST_SCREENSAVER 0
 
+#include "pamhandle.h"
+
 namespace ScreenLocker
 {
 
@@ -120,6 +122,17 @@ UnlockApp::UnlockApp(int &argc, char **argv)
     , m_lnfIntegration(new LnFIntegration(this))
 {
     m_authenticator = createAuthenticator();
+
+    // TODO This needs guarding from a config or something
+    qDebug() << "starting auth for " << KUser().loginName();
+    auto fingerAuthJob = new AuthenticateUserJob(QStringLiteral("kde-finger"), KUser().loginName());
+    connect(fingerAuthJob, &AuthenticateUserJob::finished, this, [](bool success) {
+        if (success) {
+            qApp->quit();
+        }
+    });
+    fingerAuthJob->start();
+
     connect(m_authenticator, &Authenticator::succeeded, this, &QCoreApplication::quit);
     initialize();
     connect(this, &UnlockApp::screenAdded, this, &UnlockApp::desktopResized);
