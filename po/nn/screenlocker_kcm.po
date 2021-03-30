@@ -1,0 +1,112 @@
+# Translation of screenlocker_kcm to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2016, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2018-09-14 06:48+0200\n"
+"PO-Revision-Date: 2018-01-27 12:11+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: kcm.cpp:58
+#, kde-format
+msgctxt "Spinbox suffix. Short for minutes"
+msgid " min"
+msgid_plural " mins"
+msgstr[0] " minutt"
+msgstr[1] " minutt"
+
+#: kcm.cpp:60
+#, kde-format
+msgctxt "Spinbox suffix. Short for seconds"
+msgid " sec"
+msgid_plural " secs"
+msgstr[0] " sekund"
+msgstr[1] " sekund"
+
+#: kcm.cpp:79
+#, kde-format
+msgid "Lock Session"
+msgstr "Lås økt"
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Error"
+msgstr "Feil"
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Failed to successfully test the screen locker."
+msgstr "Klarte ikkje å prøva skjermlåsaren."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: kcm.ui:36
+#, kde-format
+msgid "Activation"
+msgstr "Låsestart"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_Autolock)
+#: kcm.ui:50
+#, kde-format
+msgid "Lock screen automatically after:"
+msgstr "Lås skjermen automatisk etter:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm.ui:73
+#, kde-format
+msgid "Re&quire password after locking:"
+msgstr "&Krev passord for opplåsing etter:"
+
+#. i18n: ectx: property (specialValueText), widget (KPluralHandlingSpinBox, kcfg_LockGrace)
+#: kcm.ui:89
+#, kde-format
+msgid "Immediately"
+msgstr "Med ein gong"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_5)
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_LockOnResume)
+#: kcm.ui:102 kcm.ui:115
+#, kde-format
+msgid "Lock screen when waking up from suspension"
+msgstr "Lås skjermen når systemet vert vekt frå kvile- eller dvalemodus."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm.ui:105
+#, kde-format
+msgid "&Lock screen on resume:"
+msgstr "&Lås skjermen ved vekking frå kvile-/dvalemodus:"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_7)
+#: kcm.ui:128
+#, kde-format
+msgid "The global keyboard shortcut to lock the screen."
+msgstr "Global snarvegstast som låser skjermen."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm.ui:131
+#, kde-format
+msgid "Keyboard shortcut:"
+msgstr "Snøggtast:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: kcm.ui:141
+#, kde-format
+msgid "Appearance"
+msgstr "Utsjånad"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm.ui:176
+#, kde-format
+msgid "Wallpaper &Type:"
+msgstr "&Type bakgrunn:"

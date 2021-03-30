@@ -1,0 +1,116 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sergiu Bivol <sergiu@cip.md>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2018-09-14 06:48+0200\n"
+"PO-Revision-Date: 2015-04-20 14:36+0300\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: kcm.cpp:58
+#, fuzzy, kde-format
+#| msgid " min"
+msgctxt "Spinbox suffix. Short for minutes"
+msgid " min"
+msgid_plural " mins"
+msgstr[0] " min"
+msgstr[1] " min"
+msgstr[2] " min"
+
+#: kcm.cpp:60
+#, fuzzy, kde-format
+#| msgid " sec"
+msgctxt "Spinbox suffix. Short for seconds"
+msgid " sec"
+msgid_plural " secs"
+msgstr[0] " sec"
+msgstr[1] " sec"
+msgstr[2] " sec"
+
+#: kcm.cpp:79
+#, kde-format
+msgid "Lock Session"
+msgstr "Blochează sesiunea"
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Error"
+msgstr "Eroare"
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Failed to successfully test the screen locker."
+msgstr "Testarea blocării ecranului a eșuat."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: kcm.ui:36
+#, kde-format
+msgid "Activation"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_Autolock)
+#: kcm.ui:50
+#, kde-format
+msgid "Lock screen automatically after:"
+msgstr "Blochează ecranul automat după:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm.ui:73
+#, kde-format
+msgid "Re&quire password after locking:"
+msgstr "Ce&re parolă după blocare:"
+
+#. i18n: ectx: property (specialValueText), widget (KPluralHandlingSpinBox, kcfg_LockGrace)
+#: kcm.ui:89
+#, kde-format
+msgid "Immediately"
+msgstr "Imediat"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_5)
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_LockOnResume)
+#: kcm.ui:102 kcm.ui:115
+#, kde-format
+msgid "Lock screen when waking up from suspension"
+msgstr "Blochează ecranul la trezirea din suspendare"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm.ui:105
+#, fuzzy, kde-format
+#| msgid "Loc&k screen on resume"
+msgid "&Lock screen on resume:"
+msgstr "&Blochează ecranul la reluare"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_7)
+#: kcm.ui:128
+#, kde-format
+msgid "The global keyboard shortcut to lock the screen."
+msgstr "Accelerator de tastatură global pentru blocarea ecranului."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm.ui:131
+#, kde-format
+msgid "Keyboard shortcut:"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: kcm.ui:141
+#, kde-format
+msgid "Appearance"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm.ui:176
+#, kde-format
+msgid "Wallpaper &Type:"
+msgstr ""

@@ -1,0 +1,108 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2018-09-14 06:48+0200\n"
+"PO-Revision-Date: 2018-08-14 15:06+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-i18n-doc@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: kcm.cpp:58
+#, kde-format
+msgctxt "Spinbox suffix. Short for minutes"
+msgid " min"
+msgid_plural " mins"
+msgstr[0] "분"
+
+#: kcm.cpp:60
+#, kde-format
+msgctxt "Spinbox suffix. Short for seconds"
+msgid " sec"
+msgid_plural " secs"
+msgstr[0] "초"
+
+#: kcm.cpp:79
+#, kde-format
+msgid "Lock Session"
+msgstr "세션 잠금"
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Error"
+msgstr "오류"
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Failed to successfully test the screen locker."
+msgstr "잠금 화면을 테스트하는 데 실패했습니다."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: kcm.ui:36
+#, kde-format
+msgid "Activation"
+msgstr "활성화"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_Autolock)
+#: kcm.ui:50
+#, kde-format
+msgid "Lock screen automatically after:"
+msgstr "자동으로 화면을 잠글 시간:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm.ui:73
+#, kde-format
+msgid "Re&quire password after locking:"
+msgstr "잠금 이후 암호를 물어볼 시간(&Q):"
+
+#. i18n: ectx: property (specialValueText), widget (KPluralHandlingSpinBox, kcfg_LockGrace)
+#: kcm.ui:89
+#, kde-format
+msgid "Immediately"
+msgstr "즉시"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_5)
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_LockOnResume)
+#: kcm.ui:102 kcm.ui:115
+#, kde-format
+msgid "Lock screen when waking up from suspension"
+msgstr "대기 모드에서 깨어날 때 화면 잠그기"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm.ui:105
+#, kde-format
+msgid "&Lock screen on resume:"
+msgstr "다시 시작할 때 화면 잠그기(&L):"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_7)
+#: kcm.ui:128
+#, kde-format
+msgid "The global keyboard shortcut to lock the screen."
+msgstr "화면을 잠글 전역 키보드 단축키입니다."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm.ui:131
+#, kde-format
+msgid "Keyboard shortcut:"
+msgstr "키보드 단축키:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: kcm.ui:141
+#, kde-format
+msgid "Appearance"
+msgstr "모양"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm.ui:176
+#, kde-format
+msgid "Wallpaper &Type:"
+msgstr "배경 그림 종류(&T):"

@@ -1,0 +1,115 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kscreenlocker\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2018-09-14 06:48+0200\n"
+"PO-Revision-Date: 2018-02-26 10:13+0000\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: DPMS unlock loginctl sessions session ck ConsoleKit\n"
+"X-POFile-SpellExtra: LoginD\n"
+
+#: abstractlocker.cpp:53
+#, kde-format
+msgid ""
+"The screen locker is broken and unlocking is not possible anymore.\n"
+"In order to unlock it either ConsoleKit or LoginD is needed, none of\n"
+"which could be found on your system."
+msgstr ""
+"O bloqueio de ecrã está com problemas, sendo que não é possível mais "
+"desbloquear.\n"
+"Para poder desbloquear, será necessário o ConsoleKit ou o LoginD, sendo que "
+"nenhum\n"
+"foi encontrado no seu sistema."
+
+#: abstractlocker.cpp:56
+#, kde-format
+msgid ""
+"The screen locker is broken and unlocking is not possible anymore.\n"
+"In order to unlock switch to a virtual terminal (e.g. Ctrl+Alt+F2),\n"
+"log in as root and execute the command:\n"
+"\n"
+"# ck-unlock-session <session-name>\n"
+"\n"
+msgstr ""
+"O bloqueio de ecrã está com problemas, sendo que não é possível mais "
+"desbloquear.\n"
+"Para poder desbloquear, mude para um terminal virtual (p.ex. Ctrl+Alt+F2),\n"
+"autentique-se e execute o comando:\n"
+"\n"
+"# ck-unlock-session <nome-sessão>\n"
+"\n"
+
+#: abstractlocker.cpp:60
+#, kde-format
+msgid ""
+"The screen locker is broken and unlocking is not possible anymore.\n"
+"In order to unlock switch to a virtual terminal (e.g. Ctrl+Alt+F2),\n"
+"log in and execute the command:\n"
+"\n"
+"loginctl unlock-session %1\n"
+"\n"
+"Afterwards switch back to the running session (Ctrl+Alt+F%2)."
+msgstr ""
+"O bloqueio de ecrã está com problemas, sendo que não é possível mais "
+"desbloquear.\n"
+"Para poder desbloquear, mude para um terminal virtual (p.ex. Ctrl+Alt+F2),\n"
+"autentique-se e execute o comando:\n"
+"\n"
+"loginctl unlock-session %1\n"
+"\n"
+"Depois disso, volte para a sessão em execução (Ctrl+Alt+F%2)."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: kcfg/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Bloqueio do ecrã activo"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: kcfg/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Define se o ecrã será bloqueado após o tempo indicado."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: kcfg/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Tempo-limite do protector do ecrã"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: kcfg/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Define os minutos, após os quais o ecrã será bloqueado."
+
+#: ksldapp.cpp:177
+#, kde-format
+msgid "Lock Session"
+msgstr "Bloquear a Sessão"
+
+#: ksldapp.cpp:381
+#, kde-format
+msgid "Screen locked"
+msgstr "Ecrã bloqueado"
+
+#: ksldapp.cpp:538
+#, kde-format
+msgid "Screen unlocked"
+msgstr "Ecrã desbloqueado"
+
+#: logind.cpp:196
+#, kde-format
+msgid "Screen Locker"
+msgstr "Bloqueio de Ecrã"
+
+#: logind.cpp:197
+#, kde-format
+msgid "Ensuring that the screen gets locked before going to sleep"
+msgstr "Garante que o ecrã fica bloqueado antes de se suspender"

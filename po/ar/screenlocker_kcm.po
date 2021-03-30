@@ -1,0 +1,123 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2018-09-14 06:48+0200\n"
+"PO-Revision-Date: 2015-01-09 18:20+0300\n"
+"Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: kcm.cpp:58
+#, fuzzy, kde-format
+#| msgid " min"
+msgctxt "Spinbox suffix. Short for minutes"
+msgid " min"
+msgid_plural " mins"
+msgstr[0] " دق"
+msgstr[1] " دق"
+msgstr[2] " دق"
+msgstr[3] " دق"
+msgstr[4] " دق"
+msgstr[5] " دق"
+
+#: kcm.cpp:60
+#, fuzzy, kde-format
+#| msgid " sec"
+msgctxt "Spinbox suffix. Short for seconds"
+msgid " sec"
+msgid_plural " secs"
+msgstr[0] " ثا"
+msgstr[1] " ثا"
+msgstr[2] " ثا"
+msgstr[3] " ثا"
+msgstr[4] " ثا"
+msgstr[5] " ثا"
+
+#: kcm.cpp:79
+#, kde-format
+msgid "Lock Session"
+msgstr ""
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Error"
+msgstr "خطأ"
+
+#: kcm.cpp:158
+#, kde-format
+msgid "Failed to successfully test the screen locker."
+msgstr "فشل اختبار قافل الشّاشة بنجاح."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: kcm.ui:36
+#, kde-format
+msgid "Activation"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_Autolock)
+#: kcm.ui:50
+#, fuzzy, kde-format
+#| msgid "&Lock screen after:"
+msgid "Lock screen automatically after:"
+msgstr "ا&قفل الشّاشة بعد:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm.ui:73
+#, kde-format
+msgid "Re&quire password after locking:"
+msgstr "ا&طلب كلمة المرور بعد القفل:"
+
+#. i18n: ectx: property (specialValueText), widget (KPluralHandlingSpinBox, kcfg_LockGrace)
+#: kcm.ui:89
+#, kde-format
+msgid "Immediately"
+msgstr "فورًا"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_5)
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_LockOnResume)
+#: kcm.ui:102 kcm.ui:115
+#, kde-format
+msgid "Lock screen when waking up from suspension"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm.ui:105
+#, fuzzy, kde-format
+#| msgid "&Lock screen after:"
+msgid "&Lock screen on resume:"
+msgstr "ا&قفل الشّاشة بعد:"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_7)
+#: kcm.ui:128
+#, kde-format
+msgid "The global keyboard shortcut to lock the screen."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm.ui:131
+#, kde-format
+msgid "Keyboard shortcut:"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: kcm.ui:141
+#, kde-format
+msgid "Appearance"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm.ui:176
+#, kde-format
+msgid "Wallpaper &Type:"
+msgstr ""

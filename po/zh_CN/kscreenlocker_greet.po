@@ -1,0 +1,62 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Weng Xuetian <wengxt@gmail.com>, 2012, 2013, 2015, 2016.
+# Xuetian Weng <xweng@cs.stonybrook.edu>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2018-09-14 06:48+0200\n"
+"PO-Revision-Date: 2019-01-05 20:49\n"
+"Last-Translator: guoyunhe <i@guoyunhe.me>\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-stable/messages/kde-workspace/kscreenlocker_greet.pot\n"
+
+#: main.cpp:99
+#, kde-format
+msgid "Greeter for the KDE Plasma Workspaces Screen locker"
+msgstr "KDE Plasma 工作空间锁屏器"
+
+#: main.cpp:104
+#, kde-format
+msgid "Starts the greeter in testing mode"
+msgstr "在测试模式中启动锁屏程序"
+
+#: main.cpp:107
+#, kde-format
+msgid "Starts the greeter with the selected theme (only in Testing mode)"
+msgstr "用指定主题启动锁屏程序 (仅在测试模式中)"
+
+#: main.cpp:112
+#, kde-format
+msgid "Lock immediately, ignoring any grace time etc."
+msgstr "立即锁定，忽略任何等待时间。"
+
+#: main.cpp:114
+#, kde-format
+msgid "Delay till the lock user interface gets shown in milliseconds."
+msgstr "显示锁屏界面前的延迟毫秒数。"
+
+#: main.cpp:118
+#, kde-format
+msgid "Don't show any lock user interface."
+msgstr "不显示锁屏界面。"
+
+#: main.cpp:120
+#, kde-format
+msgid "Default to the switch user UI."
+msgstr "默认为切换用户界面。"
+
+#: main.cpp:123
+#, kde-format
+msgid "File descriptor for connecting to ksld."
+msgstr "连接到 ksld 的文件描述符。"

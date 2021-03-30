@@ -1,0 +1,118 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Weng Xuetian <wengxt@gmail.com>, 2012, 2015.
+# Feng Chao <chaofeng111@gmail.com>, 2014.
+# Xuetian Weng <wengxt@gmail.cm>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2018-09-14 06:48+0200\n"
+"PO-Revision-Date: 2019-01-05 20:49\n"
+"Last-Translator: guoyunhe <i@guoyunhe.me>\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-stable/messages/kde-workspace/kscreenlocker.pot\n"
+
+#: abstractlocker.cpp:53
+#, kde-format
+msgid ""
+"The screen locker is broken and unlocking is not possible anymore.\n"
+"In order to unlock it either ConsoleKit or LoginD is needed, none of\n"
+"which could be found on your system."
+msgstr ""
+"锁屏已经损坏，无法正常解锁。\n"
+"要解锁系统，您需要 ConsoleKit 或者 LoginD，但是无法在系统上找到它们。"
+
+#: abstractlocker.cpp:56
+#, kde-format
+msgid ""
+"The screen locker is broken and unlocking is not possible anymore.\n"
+"In order to unlock switch to a virtual terminal (e.g. Ctrl+Alt+F2),\n"
+"log in as root and execute the command:\n"
+"\n"
+"# ck-unlock-session <session-name>\n"
+"\n"
+msgstr ""
+"锁屏器已损坏无法解锁。\n"
+"想要解锁请切换到虚拟终端 (例如 Ctrl+Alt+F2)，\n"
+"请以 Root 身份登录并执行以下命令：\n"
+"\n"
+"# ck-unlock-session <会话名称>\n"
+"\n"
+
+#: abstractlocker.cpp:60
+#, kde-format
+msgid ""
+"The screen locker is broken and unlocking is not possible anymore.\n"
+"In order to unlock switch to a virtual terminal (e.g. Ctrl+Alt+F2),\n"
+"log in and execute the command:\n"
+"\n"
+"loginctl unlock-session %1\n"
+"\n"
+"Afterwards switch back to the running session (Ctrl+Alt+F%2)."
+msgstr ""
+"锁屏器已损坏无法解锁。\n"
+"想要解锁请切换到虚拟终端 (例如 Ctrl+Alt+F2)，\n"
+"登录并执行以下命令：\n"
+"\n"
+"loginctl unlock-session %1\n"
+"\n"
+"之后切换回正在运行的会话 (Ctrl+Alt+F%2)。"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: kcfg/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "启用屏幕锁定"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: kcfg/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "设置屏幕是否在指定时间后锁定。"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: kcfg/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "屏幕保护程序超时时间"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: kcfg/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "设置屏幕锁定前等待的分钟数。"
+
+#: ksldapp.cpp:177
+#, kde-format
+msgid "Lock Session"
+msgstr "锁定会话"
+
+#: ksldapp.cpp:381
+#, kde-format
+msgid "Screen locked"
+msgstr "屏幕已锁定"
+
+#: ksldapp.cpp:538
+#, kde-format
+msgid "Screen unlocked"
+msgstr "屏幕已解锁"
+
+#: logind.cpp:196
+#, kde-format
+msgid "Screen Locker"
+msgstr "锁屏程序"
+
+#: logind.cpp:197
+#, kde-format
+msgid "Ensuring that the screen gets locked before going to sleep"
+msgstr "保证屏幕在休眠前被锁定"

@@ -282,3 +282,6 @@ if(BUILD_TESTING)
    add_subdirectory(tests)
 endif()
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
+find_package(KF5I18n CONFIG REQUIRED)
+ki18n_install(po)

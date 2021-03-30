@@ -1,0 +1,143 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2012, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2018-09-14 06:48+0200\n"
+"PO-Revision-Date: 2016-01-10 19:51+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: abstractlocker.cpp:53
+#, fuzzy, kde-format
+#| msgid ""
+#| "The screen locker is broken and unlocking is not possible anymore.\n"
+#| "In order to unlock switch to a virtual terminal (e.g. Ctrl+Alt+F2),\n"
+#| "log in and execute the command:\n"
+#| "\n"
+#| "loginctl unlock-sessions\n"
+#| "\n"
+#| "Afterwards switch back to the running session (Ctrl+Alt+F%1)."
+msgid ""
+"The screen locker is broken and unlocking is not possible anymore.\n"
+"In order to unlock it either ConsoleKit or LoginD is needed, none of\n"
+"which could be found on your system."
+msgstr ""
+"Ekraani lukustaja on katki ja lahtilukustamine ei ole enam võimalik.\n"
+"Lahtilukustamiseks lülitu virtuaalsesse terminali (nt. Ctrl+Alt+F2),\n"
+"logi sisse ja anna käsk:\n"
+"\n"
+"loginctl unlock-sessions\n"
+"\n"
+"Seejärel lülitu tagasi aktiivsesse seanssi (Ctrl+Alt+F%1)."
+
+#: abstractlocker.cpp:56
+#, fuzzy, kde-format
+#| msgid ""
+#| "The screen locker is broken and unlocking is not possible anymore.\n"
+#| "In order to unlock switch to a virtual terminal (e.g. Ctrl+Alt+F2),\n"
+#| "log in and execute the command:\n"
+#| "\n"
+#| "loginctl unlock-sessions\n"
+#| "\n"
+#| "Afterwards switch back to the running session (Ctrl+Alt+F%1)."
+msgid ""
+"The screen locker is broken and unlocking is not possible anymore.\n"
+"In order to unlock switch to a virtual terminal (e.g. Ctrl+Alt+F2),\n"
+"log in as root and execute the command:\n"
+"\n"
+"# ck-unlock-session <session-name>\n"
+"\n"
+msgstr ""
+"Ekraani lukustaja on katki ja lahtilukustamine ei ole enam võimalik.\n"
+"Lahtilukustamiseks lülitu virtuaalsesse terminali (nt. Ctrl+Alt+F2),\n"
+"logi sisse ja anna käsk:\n"
+"\n"
+"loginctl unlock-sessions\n"
+"\n"
+"Seejärel lülitu tagasi aktiivsesse seanssi (Ctrl+Alt+F%1)."
+
+#: abstractlocker.cpp:60
+#, fuzzy, kde-format
+#| msgid ""
+#| "The screen locker is broken and unlocking is not possible anymore.\n"
+#| "In order to unlock switch to a virtual terminal (e.g. Ctrl+Alt+F2),\n"
+#| "log in and execute the command:\n"
+#| "\n"
+#| "loginctl unlock-sessions\n"
+#| "\n"
+#| "Afterwards switch back to the running session (Ctrl+Alt+F%1)."
+msgid ""
+"The screen locker is broken and unlocking is not possible anymore.\n"
+"In order to unlock switch to a virtual terminal (e.g. Ctrl+Alt+F2),\n"
+"log in and execute the command:\n"
+"\n"
+"loginctl unlock-session %1\n"
+"\n"
+"Afterwards switch back to the running session (Ctrl+Alt+F%2)."
+msgstr ""
+"Ekraani lukustaja on katki ja lahtilukustamine ei ole enam võimalik.\n"
+"Lahtilukustamiseks lülitu virtuaalsesse terminali (nt. Ctrl+Alt+F2),\n"
+"logi sisse ja anna käsk:\n"
+"\n"
+"loginctl unlock-sessions\n"
+"\n"
+"Seejärel lülitu tagasi aktiivsesse seanssi (Ctrl+Alt+F%1)."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: kcfg/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Ekraani lukustamine on lubatud"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: kcfg/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Määramine, kas lukustada ekraan määratud aja järel."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: kcfg/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Ekraanisäästja viivitus"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: kcfg/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Määramine, mitme minuti pärast ekraan lukustatakse."
+
+#: ksldapp.cpp:177
+#, kde-format
+msgid "Lock Session"
+msgstr "Lukusta seanss"
+
+#: ksldapp.cpp:381
+#, kde-format
+msgid "Screen locked"
+msgstr "Ekraan on lukustatud"
+
+#: ksldapp.cpp:538
+#, kde-format
+msgid "Screen unlocked"
+msgstr "Ekraan on lahtilukustatud"
+
+#: logind.cpp:196
+#, kde-format
+msgid "Screen Locker"
+msgstr "Ekraani lukustaja"
+
+#: logind.cpp:197
+#, kde-format
+msgid "Ensuring that the screen gets locked before going to sleep"
+msgstr "Tagamine, et ekraan lukustatakse enne uinumist"
