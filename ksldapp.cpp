@@ -22,6 +22,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "ksldapp.h"
 #include "interface.h"
+#include "gemianlockinterface.h"
+#include "gemianuseractivityinterface.h"
 #include "globalaccel.h"
 #include "x11locker.h"
 #include "waylandlocker.h"
@@ -95,6 +97,7 @@ KSldApp::KSldApp(QObject * parent)
     , m_logind(nullptr)
     , m_greeterEnv(QProcessEnvironment::systemEnvironment())
     , m_powerManagementInhibition(new PowerManagementInhibition(this))
+    , m_gemianUserActivityInterface(nullptr)
 {
     m_isX11 = QX11Info::isPlatformX11();
     m_isWayland = QCoreApplication::instance()->property("platformName").toString().startsWith( QLatin1String("wayland"), Qt::CaseInsensitive);
@@ -248,8 +251,9 @@ void KSldApp::initialize()
     m_lockedTimer.invalidate();
     m_graceTimer->setSingleShot(true);
     connect(m_graceTimer, &QTimer::timeout, this, &KSldApp::endGraceTime);
-    // create our D-Bus interface
+    // create our D-Bus interfaces
     new Interface(this);
+    new GemianLockInterface(this);
 
     // connect to logind
     m_logind = new LogindIntegration(this);
@@ -526,6 +530,8 @@ void KSldApp::doUnlock()
 #endif
     }
     hideLockWindow();
+    delete m_gemianUserActivityInterface;
+    m_gemianUserActivityInterface = nullptr;
     // delete the window again, to get rid of event filter
     delete m_lockWindow;
     m_lockWindow = nullptr;
@@ -632,6 +638,7 @@ void KSldApp::showLockWindow()
             },
             Qt::QueuedConnection
         );
+        m_gemianUserActivityInterface = new GemianUserActivityInterface(m_lockWindow);
         connect(m_lockWindow, &AbstractLocker::lockWindowShown, m_lockWindow,
             [this] {
                 lockScreenShown();

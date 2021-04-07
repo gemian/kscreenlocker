@@ -9,7 +9,7 @@ case "$1" in
 	# "a kscreenlocker_greet started in Plasma 5.9 won't be able to unlock
 	# with a kcheckpass from Plasma 5.10"
 	# When killed kscreenlocker_greet is relaunched
-	killall kscreenlocker_greet || true
+	pkill -f kscreenlocker_greet || true
         ;;
 
     abort-upgrade|abort-deconfigure|abort-remove)

@@ -281,18 +281,30 @@ bool X11Locker::nativeEventFilter(const QByteArray &eventType, void *message, lo
     const uint8_t responseType = event->response_type & ~0x80;
     if (globalAccel() && responseType == XCB_KEY_PRESS) {
         if (globalAccel()->checkKeyPress(reinterpret_cast<xcb_key_press_event_t*>(event))) {
-            emit userActivity();
+            emit userActivityPress();
             return true;
         }
     }
     bool ret = false;
     switch (responseType) {
-        case XCB_BUTTON_PRESS:
-        case XCB_BUTTON_RELEASE:
         case XCB_KEY_PRESS:
+            emit userActivityPress();
+            if (globalAccel()) {
+                globalAccel()->handleFunctionKeys(reinterpret_cast<xcb_key_press_event_t*>(event));
+            }
+            break;
+        case XCB_KEY_RELEASE:
+            emit userActivityRelease();
+            break;
+        default:
+            break;
+    }
+    switch (responseType) {
+        case XCB_BUTTON_PRESS:
+        case XCB_KEY_PRESS:
+        case XCB_BUTTON_RELEASE:
         case XCB_KEY_RELEASE:
         case XCB_MOTION_NOTIFY:
-            emit userActivity();
             if (!m_lockWindows.isEmpty()) {
                 int x = 0;
                 int y = 0;

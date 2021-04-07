@@ -72,6 +72,8 @@ public:
     void emergencyShow();
 
 Q_SIGNALS:
+    void userActivityPress();
+    void userActivityRelease();
     void userActivity();
     void lockWindowShown();
 

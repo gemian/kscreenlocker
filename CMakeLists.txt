@@ -159,12 +159,16 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kscreenlocker\")
 
 set(screensaver_dbusXML dbus/org.freedesktop.ScreenSaver.xml)
 set(kscreensaver_dbusXML dbus/org.kde.screensaver.xml)
+set(gemianlock_dbusXML dbus/org.thinkglobally.Gemian.Lock.xml)
+set(gemianuseractivity_dbusXML dbus/org.thinkglobally.Gemian.UserActivity.xml)
 set(powerdevilpolicyagent_xml dbus/kf5_org.kde.Solid.PowerManagement.PolicyAgent.xml)
 
 set(ksld_SRCS
    abstractlocker.cpp
    ksldapp.cpp
    interface.cpp
+   gemianlockinterface.cpp
+   gemianuseractivityinterface.cpp
    globalaccel.cpp
    x11locker.cpp
    waylandlocker.cpp
@@ -175,6 +179,8 @@ set(ksld_SRCS
 )
 qt5_add_dbus_adaptor(ksld_SRCS ${screensaver_dbusXML} interface.h ScreenLocker::Interface)
 qt5_add_dbus_adaptor(ksld_SRCS ${kscreensaver_dbusXML} interface.h ScreenLocker::Interface kscreensaveradaptor KScreenSaverAdaptor)
+qt5_add_dbus_adaptor(ksld_SRCS ${gemianlock_dbusXML} gemianlockinterface.h ScreenLocker::GemianLockInterface gemianlockadaptor GemianLockAdaptor)
+qt5_add_dbus_adaptor(ksld_SRCS ${gemianuseractivity_dbusXML} gemianuseractivityinterface.h ScreenLocker::GemianUserActivityInterface gemianuseractivityadaptor GemianUserActivityAdaptor)
 kconfig_add_kcfg_files(ksld_SRCS kcfg/kscreensaversettings.kcfgc)
 qt5_add_dbus_interface(ksld_SRCS ${powerdevilpolicyagent_xml} powerdevilpolicyagent)
 
@@ -272,6 +278,11 @@ install(FILES ${screensaver_dbusXML}
 install(FILES ${kscreensaver_dbusXML}
         DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR})
 
+install(FILES ${gemianlock_dbusXML}
+        DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR})
+
+install(FILES ${gemianuseractivity_dbusXML}
+        DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR})
 
 install(FILES   updaters/kscreenlocker.upd DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
 install(PROGRAMS updaters/ksreenlocker_5_3_separate_autologin.pl

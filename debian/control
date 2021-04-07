@@ -76,6 +76,7 @@ Breaks: kwin-common (<< 4:5.14),
         kwin-x11 (<< 4:5.12),
         plasma-workspace (<< 4:5.14),
 Replaces: plasma-workspace (<= 4:5.5.0~)
+Conflicts: gemian-lock
 Multi-Arch: same
 Description: Secure lock screen architecture
  Library and components for secure lock screen architecture.

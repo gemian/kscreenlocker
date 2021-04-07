@@ -85,6 +85,12 @@ public:
 
     bool keyEvent(QKeyEvent *event);
 
+    void handleFunctionKeys(xcb_key_press_event_t *event);
+
+    void ToggleWirelessState();
+    void ToggleBluetoothState();
+    void ToggleCellularState();
+
 private:
     void components(QDBusPendingCallWatcher *watcher);
     /**
@@ -104,6 +110,7 @@ private:
      **/
     QMap<QString, QList<KGlobalShortcutInfo>> m_shortcuts;
     xcb_key_symbols_t *m_keySymbols = nullptr;
+    struct xkb_state *xkb_state;
 };
 
 #endif

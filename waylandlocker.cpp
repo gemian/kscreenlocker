@@ -75,7 +75,7 @@ void WaylandLocker::hideLockWindow()
 {
 }
 
-void WaylandLocker::addAllowedWindow(quint32 window)
+void WaylandLocker::addAllowedWindow(quint32 /*window*/)
 {
 }
 

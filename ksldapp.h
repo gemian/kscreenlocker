@@ -54,6 +54,7 @@ enum class EstablishLock {
 
 class AbstractLocker;
 class WaylandServer;
+class GemianUserActivityInterface;
 
 class KSCREENLOCKER_EXPORT KSldApp : public QObject
 {
@@ -194,6 +195,7 @@ private:
     int m_greeterCrashedCounter = 0;
     QProcessEnvironment m_greeterEnv;
     PowerManagementInhibition *m_powerManagementInhibition;
+    GemianUserActivityInterface *m_gemianUserActivityInterface;
 
     // for auto tests
     friend KSldTest;
