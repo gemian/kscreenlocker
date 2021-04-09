@@ -1,0 +1,23 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource>
+        <file>overridetheme/LockOsd.qml</file>
+        <file>overridetheme/LockScreen.qml</file>
+        <file>overridetheme/LockScreenUi.qml</file>
+        <file>overridetheme/MainBlock.qml</file>
+        <file>overridetheme/MediaControls.qml</file>
+        <file>osd/Osd.qml</file>
+        <file>osd/OsdItem.qml</file>
+        <file>components/ActionButton.qml</file>
+        <file>components/Battery.qml</file>
+        <file>components/Connectivity.qml</file>
+        <file>components/Clock.qml</file>
+        <file>components/KeyboardLayoutButton.qml</file>
+        <file>components/SessionManagementScreen.qml</file>
+        <file>components/SwitchButton.qml</file>
+        <file>components/UserDelegate.qml</file>
+        <file>components/UserList.qml</file>
+        <file>components/VirtualKeyboard.qml</file>
+        <file>components/WallpaperFader.qml</file>
+    </qresource>
+</RCC>

@@ -114,6 +114,7 @@ UnlockApp::UnlockApp(int &argc, char **argv)
     , m_defaultToSwitchUser(false)
     , m_wallpaperIntegration(new WallpaperIntegration(this))
     , m_lnfIntegration(new LnFIntegration(this))
+    , m_mainQmlPath(QStringLiteral("qrc:/overridetheme/LockScreen.qml"))
 {
     m_authenticator = createAuthenticator();
     connect(m_authenticator, &Authenticator::succeeded, this, &QCoreApplication::quit);
@@ -185,8 +186,6 @@ void UnlockApp::initialize()
     if (!KScreenSaverSettings::theme().isEmpty()) {
         package.setPath(KScreenSaverSettings::theme());
     }
-
-    m_mainQmlPath = package.fileUrl("lockscreenmainscript");
 
     m_wallpaperIntegration->setConfig(KScreenSaverSettings::self()->sharedConfig());
     m_wallpaperIntegration->setPluginName(KScreenSaverSettings::self()->wallpaperPlugin());
@@ -529,7 +528,6 @@ void UnlockApp::setTheme(const QString &theme)
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
     package.setPath(m_packageName);
 
-    m_mainQmlPath = package.fileUrl("lockscreenmainscript");
 }
 
 void UnlockApp::setImmediateLock(bool immediate)
