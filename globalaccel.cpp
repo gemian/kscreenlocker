@@ -57,6 +57,11 @@ static const QString s_ofonoPath = QStringLiteral("/ril_0");
 static const QString s_ofonoModemInterface = QStringLiteral("org.ofono.Modem");
 static const QString s_getPropertiesMethod = QStringLiteral("GetProperties");
 static const QString s_setPropertyMethod = QStringLiteral("SetProperty");
+static const QString s_urfKillDestination = QStringLiteral("org.freedesktop.URfkill");
+static const QString s_urfKillPath = QStringLiteral("/org/freedesktop/URfkill");
+static const QString s_urfKillBlockInterface = QStringLiteral("org.freedesktop.URfkill");
+static const QString s_urfKillBlockMethod = QStringLiteral("Block");
+static const QString s_urfKillBlockedError = QStringLiteral("Blocked through rfkill");
 
 Q_DECLARE_METATYPE(QList<KGlobalShortcutInfo>)
 
@@ -363,6 +368,7 @@ void GlobalAccel::ToggleWirelessState() {
 void GlobalAccel::ToggleBluetoothState() {
     //dbus-send --system --dest=org.bluez --print-reply /org/bluez/hci0 org.freedesktop.DBus.Properties.Get string:org.bluez.Adapter1 string:Powered
     //dbus-send --system --dest=org.bluez --print-reply /org/bluez/hci0 org.freedesktop.DBus.Properties.Set string:org.bluez.Adapter1 string:Powered variant:boolean:false
+    //sudo dbus-send --system --dest=org.freedesktop.URfkill --print-reply /org/freedesktop/URfkill org.freedesktop.URfkill.Block uint32:2 boolean:false
 
     QDBusMessage message = QDBusMessage::createMethodCall(s_bluezDestination,
                                                           s_bluezHci0Path,
@@ -389,7 +395,28 @@ void GlobalAccel::ToggleBluetoothState() {
                 m << s_bluezAdapter1Interface;
                 m << s_poweredProperty;
                 m << QVariant::fromValue(QDBusVariant(!reply.value().toBool()));
-                QDBusConnection::systemBus().asyncCall(m);
+                QDBusPendingReply<QVariant> async = QDBusConnection::systemBus().asyncCall(m);
+                QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(async, this);
+                connect(callWatcher, &QDBusPendingCallWatcher::finished, this,
+                        [this](QDBusPendingCallWatcher *self) {
+                            QDBusPendingReply<QVariant> reply = *self;
+                            self->deleteLater();
+                            if (!reply.isValid()) {
+                                if (reply.isError()) {
+                                    if (reply.error().message().compare(s_urfKillBlockedError,Qt::CaseInsensitive) == 0) {
+                                        QDBusMessage m = QDBusMessage::createMethodCall(s_urfKillDestination,
+                                                                                        s_urfKillPath,
+                                                                                        s_urfKillBlockInterface,
+                                                                                        s_urfKillBlockMethod);
+                                        m << (unsigned int) 2;
+                                        m << false;
+                                        QDBusConnection::systemBus().asyncCall(m);
+                                    }
+                                }
+                                return;
+                            }
+                        }
+                );
             }
     );
 }
