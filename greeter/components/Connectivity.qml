@@ -24,20 +24,27 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.bluezqt 1.0 as BluezQt
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 import org.kde.kquickcontrolsaddons 2.0
+import MeeGo.QOfono 0.2
 
 Rectangle {
     id: connectivity
 
-    anchors {
-        bottom: parent.bottom
-        left: parent.left
-    }
     color: "white"
 
     height: wifiSwitchButton.height
     width: connectivityButtonRow.width
 
     property QtObject btManager : BluezQt.Manager
+
+    OfonoManager {
+        id: ofonoManager
+    }
+
+    OfonoModem {
+        id: ofonoModem1
+        modemPath: ofonoManager.defaultModem
+    }
+
 
     PlasmaNM.Handler {
         id: handler
@@ -81,6 +88,19 @@ Rectangle {
 
             onClicked: {
                 handler.enableWireless(checked);
+            }
+        }
+
+        SwitchButton {
+            id: cellularSwitchButton
+
+            checked: enabled && ofonoModem1.powered
+            enabled: ofonoManager.available
+            icon: "phone"
+            visible: ofonoManager.available
+
+            onClicked: {
+                ofonoModem1.powered = checked;
             }
         }
 
