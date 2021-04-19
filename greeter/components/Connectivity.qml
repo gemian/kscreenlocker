@@ -26,10 +26,8 @@ import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 import org.kde.kquickcontrolsaddons 2.0
 import MeeGo.QOfono 0.2
 
-Rectangle {
+Item {
     id: connectivity
-
-    color: "white"
 
     height: wifiSwitchButton.height
     width: connectivityButtonRow.width
@@ -70,7 +68,7 @@ Rectangle {
     RowLayout {
         id: connectivityButtonRow
 
-        spacing: units.smallSpacing * 4
+        spacing: units.smallSpacing * 2
 
         Rectangle {
             color: "transparent"
@@ -78,41 +76,59 @@ Rectangle {
             height: wifiSwitchButton.height
         }
 
-        SwitchButton {
-            id: wifiSwitchButton
+        Rectangle {
+            color: "white"
+            height: wifiSwitchButton.height
+            width: wifiSwitchButton.width
 
-            checked: enabled && enabledConnections.wirelessEnabled
-            enabled: enabledConnections.wirelessHwEnabled && availableDevices.wirelessDeviceAvailable
-            icon: "network-wireless"
-            visible: availableDevices.wirelessDeviceAvailable
+            SwitchButton {
+                id: wifiSwitchButton
 
-            onClicked: {
-                handler.enableWireless(checked);
+                checked: enabled && enabledConnections.wirelessEnabled
+                enabled: enabledConnections.wirelessHwEnabled && availableDevices.wirelessDeviceAvailable
+                icon: "network-wireless"
+                visible: availableDevices.wirelessDeviceAvailable
+
+                onClicked: {
+                    handler.enableWireless(checked);
+                }
             }
         }
 
-        SwitchButton {
-            id: cellularSwitchButton
+        Rectangle {
+            color: "white"
+            height: cellularSwitchButton.height
+            width: cellularSwitchButton.width
 
-            checked: enabled && ofonoModem1.powered
-            enabled: ofonoManager.available
-            icon: "phone"
-            visible: ofonoManager.available
+            SwitchButton {
+                id: cellularSwitchButton
 
-            onClicked: {
-                ofonoModem1.powered = checked;
+                checked: enabled && ofonoModem1.powered
+                enabled: ofonoManager.available
+                icon: "phone"
+                visible: ofonoManager.available
+
+                onClicked: {
+                    ofonoModem1.powered = checked;
+                }
             }
         }
 
-        SwitchButton {
-            id: bluetoothSwitchButton
+        Rectangle {
+            color: "white"
+            height: bluetoothSwitchButton.height
+            width: bluetoothSwitchButton.width
 
-            checked: btManager.bluetoothOperational
-            enabled: btManager.bluetoothBlocked || btManager.adapters.length
-            icon: "preferences-system-bluetooth"
+            SwitchButton {
+                id: bluetoothSwitchButton
 
-            onClicked: {
-                enableBluetooth(checked);
+                checked: btManager.bluetoothOperational
+                enabled: btManager.bluetoothBlocked || btManager.adapters.length
+                icon: "preferences-system-bluetooth"
+
+                onClicked: {
+                    enableBluetooth(checked);
+                }
             }
         }
 
